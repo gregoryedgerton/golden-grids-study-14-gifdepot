@@ -41,9 +41,10 @@ Helvetica Neue (Inter stands in), 8px corners on buttons and tiles, 1px
 outlines on department tiles (the reference outlines them, so the study does
 too) and none on product cards, prices with the dollars large and the cents
 raised. The reference has one scheme on the web; dark is the study's own.
-White text on the bright orange does not pass contrast at small sizes, so
-buttons, the promotion bar and promotion blocks use a deeper orange `#c94800`;
-the bright orange is the mark's colour in the icons and the share image only.
+White text on the exact orange is 3.1:1 and fails at small sizes, so type on
+the orange is ink `#202020` (5.3:1); only the mark's lettering (large text, 3:1) and the search
+icon stay white. Orange text and links on white use a darker orange
+`#a63d00`.
 
 ## Approach
 

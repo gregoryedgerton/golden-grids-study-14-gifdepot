@@ -135,6 +135,17 @@ turns every style write into a transition and breaks anything that
 measures after writing. Clips become their stills; any dial becomes a static
 layout. Verify with the device setting on, not only the tools switch.
 
+**Opened cells hold on a phone.** An opened cell never widens the page, and its
+head stays locked under the notice (and under any bar that really sticks)
+while its content scrolls beneath. A grid item that holds a list set to
+`white-space: nowrap` or `overflow-x: auto` must have `min-width: 0` and a
+`minmax(0, 1fr)` track, or the whole column takes the width of the list; a bar
+that scrolls away on a phone must publish `--bar-h: 0` (read the computed
+`position`, not the breakpoint); form controls are 16px on a phone so iOS does
+not zoom the page when one is focused. `captures/cells.cjs` opens every
+expandable square at a phone width in WebKit and Chrome and fails on any of it.
+(Greg, Studies 13 to 15.)
+
 **Accessibility is audited, not assumed.** Before publishing run
 `captures/scan.cjs` against the dev server: in Chrome and WebKit, at 390,
 820 and 1440, light and dark, it finds anything overflowing its box, any
@@ -161,10 +172,14 @@ README: the smallest line, and that no screen-reader user has tested it.
 - EDGES are the reference's: department tiles are outlined (1px, 10px corners)
   because the reference outlines them; product cards, promotions and fact tiles
   are flat. Promotions are orange or dark blocks with a photograph.
-- Orange: `--orange` #f96302 is for large fills and the icons only. White small
-  text sits on `--orange-deep` #c94800 (buttons, promotion bar, promotions,
-  the mark) so it passes 4.5:1. `--orange-ink` (#a63d00) is the orange for
-  small text on white. Do not put white 12px type on #f96302.
+- Orange: `--orange` #f96302 is the exact brand orange and the only orange
+  fill (Greg, 2026-10-10: "use exact orange"): the promotion bar, buttons, the
+  mark, the search button, promotion blocks, the cart count. White on it is
+  3.1:1 and fails at small sizes, so text on the orange is `--on-orange`
+  (#202020, 5.3:1); only the mark's lettering (19px 800, which counts as large text at 3:1) and
+  the search icon stay white. `--orange-ink` (#a63d00) is the darker orange for
+  small text and links on white. Do not put white small type on #f96302 and
+  do not replace the fill with a darker orange.
 - Prices are set with `Price`: a small $, large dollars, raised cents.
 - A cell's opened content must be a DIRECT child of its GoldenBox (expand.css
   keys on `> .cell--expanded`); do not wrap a tile in another element.
