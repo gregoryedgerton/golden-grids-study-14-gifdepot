@@ -1,0 +1,71 @@
+{
+  "number": "14",
+  "name": "Home Depot",
+  "brand": "GIFdepot",
+  "notice": "A layout study, not Home Depot: four of its pages (home, outdoor power equipment, Halloween decorations and a product page) rebuilt with Golden Grids as GIFdepot, a parody name. Not affiliated with Home Depot; every product, price and rating is invented and nothing can be bought.",
+  "pages": {
+    "index": "Home",
+    "outdoor": "Outdoor Power Equipment",
+    "halloween": "Halloween Decorations",
+    "product": "A product page"
+  },
+  "summary": "The home page, the outdoor power equipment category, the Halloween decorations list and one product page of homedepot.com, rebuilt as stacked golden grids, with the type on each card scaled to the square it sits in.",
+  "reviewed": {
+    "date": "October 9, 2026",
+    "method": "Read in a desktop browser at about 1,024 pixels wide, signed out, with text and computed styles taken from the pages; lower parts of the product page, which load as the page is scrolled, were not all captured and are drawn from how such pages are known to be organised. No screenshot of the reference is kept or published.",
+    "pages": [
+      {
+        "label": "Home page",
+        "url": "https://www.homedepot.com/"
+      },
+      {
+        "label": "Outdoor Power Equipment",
+        "url": "https://www.homedepot.com/b/Outdoors-Outdoor-Power-Equipment/N-5yc1vZbx5c"
+      },
+      {
+        "label": "Halloween Decorations",
+        "url": "https://www.homedepot.com/b/Holiday-Decorations-Halloween-Decorations/N-5yc1vZc2ve"
+      },
+      {
+        "label": "A product page: a 6 ft animated Halloween figure",
+        "url": "https://www.homedepot.com/p/Home-Accents-Holiday-6-FT-Grave-Bones-Animated-LED-John-the-Last-Call-Mixologist-26SV25320/339865644"
+      }
+    ]
+  },
+  "real": [
+    "The shape of each page: which modules come in which order, the departments and the kinds of outdoor power equipment, the fields on a product card and the steps of a product page.",
+    "The prices on the cards, the percentages saved and the figures such as thirty-day returns and the fifty-an-order limit, which are the ones the reference showed on the day it was read.",
+    "The general guidance in the outdoor-equipment notes (what horsepower, psi, bar length or deck width mean), which is common knowledge."
+  ],
+  "invented": [
+    "Every product's name, model number, rating and review count. A card follows the shape of the reference's; none of its product names, maker names or private-label names is used, and the products shown here are not the reference's products.",
+    "Home Accents Holiday, the reference's own Halloween line, is played as GIFdepot Accents Holiday; its collections (Grave & Bones, Wicked Woods, Dead Water) are played as Boneyard, Hollow Woods and Dead Tide, and its figures are given new names and descriptions.",
+    "The store, its stock, its aisle and the delivery promise. 'Hazlet', '6AM' and '07730' are shown as the reference showed them and mean nothing here; the cart, the search and the filters work on the study's own products only.",
+    "The name. GIFdepot is a parody name made for this study; it is not a retailer.",
+    "The dark colour scheme, which the reference does not have on the web, and the cart, which lives only in the browser tab."
+  ],
+  "assets": [
+    {
+      "what": "Photographs",
+      "source": "Unsplash photographers, each credited below and beside the photograph when it is opened. Each shows a kind of thing (a mower, a skeleton, a kitchen), not a product offered here",
+      "url": "https://unsplash.com/license",
+      "licence": "Unsplash License (free to use; not a Creative Commons licence)"
+    },
+    {
+      "what": "Icons",
+      "source": "Drawn for the study; none is the reference's"
+    },
+    {
+      "what": "Text",
+      "source": "The study's own"
+    },
+    {
+      "what": "Typeface",
+      "source": "Inter, standing in for the reference's Helvetica Neue",
+      "licence": "SIL Open Font License"
+    }
+  ],
+  "owner": "The Home Depot",
+  "repo": "https://github.com/gregoryedgerton/golden-grids-study-14-homedepot",
+  "updated": "October 9, 2026"
+}
