@@ -1,3 +1,5 @@
+GIFcommit00013
+
 # Layout study — Home Depot, as GIFdepot
 
 **Live:** [`https://gregoryedgerton.github.io/golden-grids-study-14-homedepot/`](https://gregoryedgerton.github.io/golden-grids-study-14-homedepot/)
