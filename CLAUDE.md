@@ -17,7 +17,7 @@ flat modules (email offer, filter bar, buy box, specifications, ratings);
 `src/sources.ts` and `src/photos.json` the provenance. Read
 `docs/program/PROGRAM.md`, then `STUDY-BRIEF.md`, then `README.md`.
 
-Live at https://gregoryedgerton.github.io/golden-grids-study-14-homedepot/;
+Live at https://gregoryedgerton.github.io/golden-grids-study-14-gifdepot/;
 pushing to `main` deploys.
 
 ## Rules that are not negotiable
@@ -332,3 +332,5 @@ personal-data fields beyond one email box that says nothing is sent; personal
 autofill tokens (`email`, `name`, `given-name`, `family-name`, `tel`,
 `postal-code`, `street-address`, `cc-*`); a checkout that asks for anything;
 links to a real login or account page.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-14-homedepot` to `golden-grids-study-14-gifdepot`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.

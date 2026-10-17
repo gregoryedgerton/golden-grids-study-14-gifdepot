@@ -2,7 +2,7 @@ GIFcommit00013
 
 # Layout study — Home Depot, as GIFdepot
 
-**Live:** [`https://gregoryedgerton.github.io/golden-grids-study-14-homedepot/`](https://gregoryedgerton.github.io/golden-grids-study-14-homedepot/)
+**Live:** [`https://gregoryedgerton.github.io/golden-grids-study-14-gifdepot/`](https://gregoryedgerton.github.io/golden-grids-study-14-gifdepot/)
 
 An unaffiliated layout study. It rebuilds four pages of
 [homedepot.com](https://www.homedepot.com/) (the home page, outdoor power
@@ -149,3 +149,5 @@ NODE_PATH=<a node_modules with playwright> node captures/scan.cjs http://localho
 ```
 
 Pushing to `main` deploys to GitHub Pages.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-14-homedepot` to `golden-grids-study-14-gifdepot`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.
