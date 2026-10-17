@@ -25,7 +25,6 @@ export const HEADER: { label: string; icon: IconName; href?: string }[] = [
   { label: "Shop All", icon: "grid", href: PAGES.home },
   { label: "Services", icon: "wrench" },
   { label: "DIY", icon: "hammer" },
-  { label: "Log In", icon: "user" },
 ];
 
 /** The reference's departments, for show; the three the study holds are links. */
@@ -172,7 +171,6 @@ export const PDP = {
   plans: [{ id: "none", label: "No thanks", price: 0 }, { id: "2y", label: "2 Year", price: 20 }, { id: "3y", label: "3 Year", price: 28 }],
   rating: 4.6, count: 368, qa: 84,
   stars: [[5, 272], [4, 52], [3, 20], [2, 9], [1, 15]] as [number, number][],
-  financing: "Pay $104 after $25 OFF your total qualifying purchase upon opening a new card.",
 };
 
 export const FACTS = {
@@ -183,10 +181,10 @@ export const FACTS = {
   types: { line: "19", label: "Kinds of outdoor power", body: "From leaf blowers to stump grinders, in one list on the left." },
 };
 
-export const WORKSHOP = { title: "Free In-Store Kids Workshops", body: "Engaging activities for your future doers. Join us the first Saturday of every month, 9 a.m. to 12 noon. While supplies last.", cta: "Register now" };
+export const WORKSHOP = { title: "Free In-Store Kids Workshops", body: "Engaging activities for your future doers. Join us the first Saturday of every month, 9 a.m. to 12 noon. While supplies last.", cta: "Learn more" };
 
 export const FOOTER: [string, string[]][] = [
-  ["Support", ["Customer Service Center", "Check Order Status", "Pickup, Shipping & Delivery", "Pay Your Credit Card", "Order Cancellation", "Return Policy", "Refund Policy", "Product Recalls", "My Preference Center", "Privacy & Security Center"]],
+  ["Support", ["Customer Service Center", "Pickup, Shipping & Delivery", "Order Cancellation", "Return Policy", "Refund Policy", "Product Recalls", "Privacy & Security Center"]],
   ["Resources", ["Specials & Offers", "Military Discount Benefit", "DIY Projects & Ideas", "Truck & Tool Rental", "Installation & Services", "Moving Supplies & Rentals", "Protection Plans", "Rebate Center", "Gift Cards", "Catalog"]],
   ["About Us", ["Careers", "Corporate Information", "Digital Newsroom", "Foundation", "Investor Relations", "Government Customers", "Suppliers & Providers", "Affiliate Program", "Eco Actions", "Corporate Responsibility"]],
 ];

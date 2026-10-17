@@ -12,12 +12,12 @@ export function EmailSignup() {
   const [sent, setSent] = useState(false);
   return (
     <section className="signup" aria-labelledby="signup-title">
-      <form className="wrap signup__row" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
-        <h2 id="signup-title">Get $5 off when you sign up for emails with savings and tips.</h2>
+      <form className="wrap signup__row" autoComplete="off" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
+        <h2 id="signup-title">Get $5 off with our emails of savings and tips.</h2>
         <label className="visually-hidden" htmlFor="signup-email">Email address</label>
-        <input id="signup-email" type="email" required placeholder="Email address" autoComplete="email" />
+        <input id="signup-email" type="email" required placeholder="Email address" autoComplete="off" />
         <button type="submit" className="btn btn--orange">GO</button>
-        <p className="note" role="status">{sent ? "Nothing was sent: this is a layout study, and there is no list." : "A form that sends nothing."}</p>
+        <p className="note" role="status">{sent ? "Nothing was sent: this is a layout study, and there is no list." : "Nothing you type here is sent or stored."}</p>
       </form>
     </section>
   );
@@ -49,10 +49,10 @@ export function FilterBar({ q, setQ, collections, toggle, sort, setSort, count, 
         <div className="chips" role="group" aria-label="Collection">
           {COLLECTIONS.map((c) => <button key={c} type="button" className="chip" aria-pressed={collections.includes(c)} onClick={() => toggle(c)}>{c}</button>)}
         </div>
-        <label className="filterbar__field"><span>Search these</span><input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Name or model" /></label>
-        <label className="filterbar__field"><span>Up to {maxPrice >= 300 ? "any price" : usd(maxPrice)}</span><input type="range" min={100} max={300} step={50} value={maxPrice} onChange={(e) => setMaxPrice(Number(e.target.value))} /></label>
+        <label className="filterbar__field"><span>Search these</span><input type="search" autoComplete="off" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Name or model" /></label>
+        <label className="filterbar__field"><span>Up to {maxPrice >= 300 ? "any price" : usd(maxPrice)}</span><input type="range" autoComplete="off" min={100} max={300} step={50} value={maxPrice} onChange={(e) => setMaxPrice(Number(e.target.value))} /></label>
         <label className="filterbar__field"><span>Sort by</span>
-          <select value={sort} onChange={(e) => setSort(e.target.value as Sort)}><option value="featured">Best match</option><option value="low">Price low to high</option><option value="high">Price high to low</option><option value="rated">Top rated</option></select>
+          <select autoComplete="off" value={sort} onChange={(e) => setSort(e.target.value as Sort)}><option value="featured">Best match</option><option value="low">Price low to high</option><option value="high">Price high to low</option><option value="rated">Top rated</option></select>
         </label>
         <p className="filterbar__count" role="status" aria-live="polite">{count} of {total} results</p>
         {any && <button type="button" className="textbtn" onClick={clear}>Clear all</button>}
@@ -74,15 +74,14 @@ export function BuyBox() {
     <section className="buy" aria-labelledby="buy-title">
       <h2 id="buy-title" className="visually-hidden">Buy this product</h2>
       <p className="buy__price"><span className="buy__special">Special Buy</span><Price n={price} big /><s>{usd(was)}</s><span className="card__save">Save {usd(was - price)} (28%)</span></p>
-      <p className="buy__fin">{PDP.financing} <span className="showonly">Apply for a GIFdepot Consumer Card</span></p>
       <fieldset className="buy__how">
         <legend>How would you like it?</legend>
-        <label className={how === "pickup" ? "is-on" : undefined}><input type="radio" name={`${id}-how`} checked={how === "pickup"} onChange={() => setHow("pickup")} /><span><strong>Pickup at {PDP.stock.store}</strong>Tomorrow<em>{PDP.stock.inStock} in stock · {PDP.stock.aisle}</em></span><b>FREE</b></label>
-        <label className={how === "delivery" ? "is-on" : undefined}><input type="radio" name={`${id}-how`} checked={how === "delivery"} onChange={() => setHow("delivery")} /><span><strong>Delivery to {PDP.stock.zip}</strong>Tomorrow<em>{PDP.stock.delivery} available</em></span><b>FREE</b></label>
+        <label className={how === "pickup" ? "is-on" : undefined}><input type="radio" autoComplete="off" name={`${id}-how`} checked={how === "pickup"} onChange={() => setHow("pickup")} /><span><strong>Pickup at {PDP.stock.store}</strong>Tomorrow<em>{PDP.stock.inStock} in stock · {PDP.stock.aisle}</em></span><b>FREE</b></label>
+        <label className={how === "delivery" ? "is-on" : undefined}><input type="radio" autoComplete="off" name={`${id}-how`} checked={how === "delivery"} onChange={() => setHow("delivery")} /><span><strong>Delivery to {PDP.stock.zip}</strong>Tomorrow<em>{PDP.stock.delivery} available</em></span><b>FREE</b></label>
       </fieldset>
       <fieldset className="buy__plans">
         <legend>Protect this item: a protection plan</legend>
-        {PDP.plans.map((pl) => <label key={pl.id} className={plan === pl.id ? "is-on" : undefined}><input type="radio" name={`${id}-plan`} checked={plan === pl.id} onChange={() => setPlan(pl.id)} /><span>{pl.label}{pl.price ? ` / ${usd(pl.price)}` : ""}</span></label>)}
+        {PDP.plans.map((pl) => <label key={pl.id} className={plan === pl.id ? "is-on" : undefined}><input type="radio" autoComplete="off" name={`${id}-plan`} checked={plan === pl.id} onChange={() => setPlan(pl.id)} /><span>{pl.label}{pl.price ? ` / ${usd(pl.price)}` : ""}</span></label>)}
       </fieldset>
       <div className="buy__row">
         <label className="buy__qty"><span>Qty</span>

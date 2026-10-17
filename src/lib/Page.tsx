@@ -10,8 +10,9 @@ import { useFontsReady } from "./fonts";
 /**
  * The shell, after the reference's: a promotion bar, then the header (the
  * mark, the store and the delivery zip, a search field with its orange
- * button, and Shop All, Services, DIY, Log In and Cart as icons over their
- * names), a footer of lists, and the email offer. The items are the
+ * button, and Shop All, Services, DIY and Cart as icons over their names;
+ * the reference's Log In is left out, see CLAUDE.md), a footer of lists, and
+ * the email offer. The items are the
  * reference's, for show; the study's pages are the links, and the cart and
  * the search work on the study's own products. Nothing in the shell leaves
  * for the reference: its pages are linked only from the notice and the
@@ -28,9 +29,9 @@ function Search() {
     setMsg(`Nothing for "${q.trim()}": the study holds outdoor power equipment and Halloween decorations.`);
   };
   return (
-    <form className="search" role="search" onSubmit={(e) => { e.preventDefault(); go(); }}>
+    <form className="search" role="search" autoComplete="off" onSubmit={(e) => { e.preventDefault(); go(); }}>
       <label className="visually-hidden" htmlFor="q">What can we help you find today?</label>
-      <input id="q" type="search" placeholder="What can we help you find today?" value={q} onChange={(e) => { setQ(e.target.value); setMsg(""); }} />
+      <input id="q" type="search" autoComplete="off" placeholder="What can we help you find today?" value={q} onChange={(e) => { setQ(e.target.value); setMsg(""); }} />
       <button type="submit" aria-label="Search"><Icon name="search" size={20} /></button>
       <span className="search__msg" role="status">{msg}</span>
     </form>
@@ -92,7 +93,7 @@ export function Page({ current, source, crumbs, children }: { current: string; s
           <a className="mark" href={PAGES.home} aria-label="GIFdepot home"><span className="mark__box">GIF<br />depot</span></a>
           <p className="top__store"><span><Icon name="store" size={18} />Hazlet <strong>6AM</strong></span><span><Icon name="truck" size={18} />07730</span></p>
           <Search />
-          <nav className="hnav" aria-label="Account and shopping">
+          <nav className="hnav" aria-label="Shopping">
             <ul>
               {HEADER.map((h) => (
                 <li key={h.label}>{h.href ? <a className="hnav__item" href={h.href} aria-current={h.href === current ? "page" : undefined}><span className="hnav__icon"><Icon name={h.icon} size={26} /></span><span>{h.label}</span></a> : <span className="hnav__item hnav__item--show"><span className="hnav__icon"><Icon name={h.icon} size={26} /></span><span>{h.label}</span></span>}</li>

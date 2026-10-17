@@ -300,3 +300,35 @@ opened in StackBlitz at `https://stackblitz.com/~/github.com/gregoryedgerton/gol
 - Do not append `?file=` to the `~/github.com` link; it made the IDE fail to
   start in testing. The classic `/github/` importer accepts `?file=` but waits
   on a WebSocket and can stall at "Cloning repo from GitHub".
+
+## Safe Browsing remediation (2026-10)
+
+On 2026-10-17 Google Safe Browsing flagged the whole origin
+gregoryedgerton.github.io as social engineering (pages that "try to trick
+visitors into sharing personal info"). The first trigger was a demo bank
+sign-in in Study 19; every study then lost anything that looks like
+collecting credentials or personal data, signing in or paying. Nothing here
+ever sent anything; the scanner reads the appearance.
+
+**What changed**
+- Header: "Log In" is gone from `HEADER` (`src/content.ts`); the icon row is
+  Shop All, Services, DIY and Cart, and its landmark is named "Shopping", not
+  "Account and shopping".
+- Email offer (`EmailSignup`, `src/lib/modules.tsx`): `autoComplete="off"`
+  (it was `email`), a heading without "sign up", and a note that nothing is
+  sent or stored; after GO it says nothing was sent.
+- Footer Support list: "Pay Your Credit Card", "Check Order Status" and "My
+  Preference Center" are gone; the policy and service items stay.
+- Product page buy box: the store-card financing line and "Apply for a
+  GIFdepot Consumer Card" are gone (`PDP.financing`, `.buy__fin`).
+- The workshops promotion's button reads "Learn more", not "Register now".
+- Every other input (header search, filter bar, buy box) carries
+  `autoComplete="off"`. The cart's Check out collects nothing: it empties the
+  cart and says nothing is bought.
+
+**Never bring back**: sign-in, log-in, sign-up or register controls or
+labels, even inert ones; card applications, card payment or account items;
+personal-data fields beyond one email box that says nothing is sent; personal
+autofill tokens (`email`, `name`, `given-name`, `family-name`, `tel`,
+`postal-code`, `street-address`, `cc-*`); a checkout that asks for anything;
+links to a real login or account page.

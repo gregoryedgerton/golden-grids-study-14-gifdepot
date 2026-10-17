@@ -42,7 +42,8 @@
     "Home Accents Holiday, the reference's own Halloween line, is played as GIFdepot Accents Holiday; its collections (Grave & Bones, Wicked Woods, Dead Water) are played as Boneyard, Hollow Woods and Dead Tide, and its figures are given new names and descriptions.",
     "The store, its stock, its aisle and the delivery promise. 'Hazlet', '6AM' and '07730' are shown as the reference showed them and mean nothing here; the cart, the search and the filters work on the study's own products only.",
     "The name. GIFdepot is a parody name made for this study; it is not a retailer.",
-    "The dark colour scheme, which the reference does not have on the web, and the cart, which lives only in the browser tab."
+    "The dark colour scheme, which the reference does not have on the web, and the cart, which lives only in the browser tab.",
+    "Left out on purpose: the reference's Log In, its store-card offer on the product page, and the footer's card-payment, order-status and preference-centre items. The email offer keeps one box, which sends nothing, and checking out only empties the cart."
   ],
   "assets": [
     {
@@ -67,5 +68,5 @@
   ],
   "owner": "The Home Depot",
   "repo": "https://github.com/gregoryedgerton/golden-grids-study-14-homedepot",
-  "updated": "October 9, 2026"
+  "updated": "October 17, 2026"
 }
